@@ -1,8 +1,8 @@
 # PRUEBAS TECNICAS
 
-# PRUEBA TECNICA 01
+## PRUEBA TECNICA 01
 
-## Objetivo
+### Objetivo
 
 Crear una aplicación web completa que permita a los usuarios gestionar productos, categorías y realizar la carga masiva de usuarios desde un archivo CSV. La aplicación permitirá realizar operaciones CRUD sobre productos y categorías, manejar un carrito de compras, utilizar Redux Toolkit para la gestión del estado y estilizar la interfaz con Tailwind CSS.
 
