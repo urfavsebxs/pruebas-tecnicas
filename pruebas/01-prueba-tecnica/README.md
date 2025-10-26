@@ -7,69 +7,69 @@ Crear una aplicación web completa que permita a los usuarios gestionar producto
 ## Requerimientos del Proyecto
 
 ### Backend (Node.js con TypeScript y SQL Server)
-- Configurar un servidor Node.js utilizando Express y TypeScript.
-- Conectar el servidor a una base de datos SQL Server.
+- Configurar un servidor Node.js utilizando Express y TypeScript. ✅
+- Conectar el servidor a una base de datos SQL Server. ✅
 - Crear una API RESTful que permita:
-  - Crear, leer, actualizar y eliminar productos.
-  - Crear, leer, actualizar y eliminar categorías.
-  - Agregar productos a un carrito.
-  - Simular una compra (checkout).
-  - Crear usuarios.
-  - Subir usuarios de manera masiva desde un archivo CSV.
+  - Crear, leer, actualizar y eliminar productos. ✅
+  - Crear, leer, actualizar y eliminar categorías. ✅
+  - Agregar productos a un carrito. X
+  - Simular una compra (checkout). X
+  - Crear usuarios. X
+  - Subir usuarios de manera masiva desde un archivo CSV. X
 
 ### Frontend (React.js con TypeScript, Redux Toolkit y Tailwind CSS)
-- Crear una interfaz de usuario utilizando React.js y TypeScript.
-- Utilizar Redux Toolkit para la gestión del estado global de la aplicación.
-- Estilizar la interfaz con Tailwind CSS.
+- Crear una interfaz de usuario utilizando React.js y TypeScript. ✅
+- Utilizar Redux Toolkit para la gestión del estado global de la aplicación. X
+- Estilizar la interfaz con Tailwind CSS. ✅
 - La interfaz debe permitir:
-  - Ver la lista de productos y categorías.
-  - Ver los detalles de un producto específico.
-  - Crear, actualizar y eliminar productos y categorías.
-  - Agregar productos al carrito.
-  - Ver el contenido del carrito.
-  - Realizar una simulación de compra.
-  - Crear usuarios.
-  - Subir usuarios desde un archivo CSV.
+  - Ver la lista de productos y categorías. X
+  - Ver los detalles de un producto específico. ✅
+  - Crear, actualizar y eliminar productos y categorías. ✅
+  - Agregar productos al carrito. X
+  - Ver el contenido del carrito. X
+  - Realizar una simulación de compra. X
+  - Crear usuarios. X
+  - Subir usuarios desde un archivo CSV. X
 
 ## Detalles del Proyecto
 
 ### Estructura de la Base de Datos (SQL Server)
 - Tabla: Products
-  - id (INT, Primary Key, Auto Increment)
-  - name (NVARCHAR(100))
-  - description (NVARCHAR(255))
-  - price (DECIMAL(10, 2))
-  - category_id (INT, Foreign Key)
-  - created_at (DATETIME)
-  - updated_at (DATETIME)
+  - id (INT, Primary Key, Auto Increment) ✅
+  - name (NVARCHAR(100)) ✅
+  - description (NVARCHAR(255)) ✅
+  - price (DECIMAL(10, 2)) ✅
+  - category_id (INT, Foreign Key) ✅
+  - created_at (DATETIME) ✅
+  - updated_at (DATETIME) ✅
 
 - Tabla: Categories
-  - id (INT, Primary Key, Auto Increment)
-  - name (NVARCHAR(100))
-  - created_at (DATETIME)
-  - updated_at (DATETIME)
+  - id (INT, Primary Key, Auto Increment) ✅
+  - name (NVARCHAR(100)) ✅
+  - created_at (DATETIME) ✅
+  - updated_at (DATETIME) ✅
 
 - Tabla: Cart
-  - id (INT, Primary Key, Auto Increment)
-  - product_id (INT, Foreign Key)
-  - quantity (INT)
-  - created_at (DATETIME)
-  
+  - id (INT, Primary Key, Auto Increment) ✅
+  - product_id (INT, Foreign Key) ✅
+  - quantity (INT) ✅
+  - created_at (DATETIME) ✅
+   
 - Tabla: Users
-  - id (INT, Primary Key, Auto Increment)
-  - username (NVARCHAR(100))
-  - email (NVARCHAR(100))
-  - password (NVARCHAR(255))
-  - created_at (DATETIME)
-  - updated_at (DATETIME)
+  - id (INT, Primary Key, Auto Increment) ✅
+  - username (NVARCHAR(100)) ✅
+  - email (NVARCHAR(100)) ✅
+  - password (NVARCHAR(255)) ✅
+  - created_at (DATETIME) ✅
+  - updated_at (DATETIME) ✅
 
 ### Endpoints de la API
-- POST /api/products - Crear un nuevo producto
-- GET /api/products - Obtener la lista de productos
-- GET /api/products/:id - Obtener los detalles de un producto específico
-- PUT /api/products/:id - Actualizar un producto
-- DELETE /api/products/:id - Eliminar un producto
-- POST /api/categories - Crear una nueva categoría
+- POST /api/products - Crear un nuevo producto ✅
+- GET /api/products - Obtener la lista de productos ✅
+- GET /api/products/:id - Obtener los detalles de un producto específico ✅
+- PUT /api/products/:id - Actualizar un producto ✅
+- DELETE /api/products/:id - Eliminar un producto ✅
+- POST /api/categories - Crear una nueva categoría 
 - GET /api/categories - Obtener la lista de categorías
 - GET /api/categories/:id - Obtener los detalles de una categoría específica
 - PUT /api/categories/:id - Actualizar una categoría
@@ -81,10 +81,14 @@ Crear una aplicación web completa que permita a los usuarios gestionar producto
 - POST /api/users/upload - Subir usuarios de manera masiva desde un archivo CSV
 
 ## Requisitos Técnicos
-- Utilizar Node.js con Express y TypeScript para el backend.
-- Utilizar Sequelize (u otro ORM) para interactuar con SQL Server.
-- Utilizar React.js con TypeScript para el frontend.
-- Utilizar Redux Toolkit para la gestión del estado global.
-- Utilizar Tailwind CSS para el diseño y estilización de la interfaz.
-- Utilizar Axios (u otro cliente HTTP) para las llamadas a la API desde el frontend.
-- Utilizar multer para la carga de archivos en Node.js.
+- Utilizar Node.js con Express y TypeScript para el backend. ✅
+- Utilizar Sequelize (u otro ORM) para interactuar con SQL Server. ¿?
+- Utilizar React.js con TypeScript para el frontend. ✅
+- Utilizar Redux Toolkit para la gestión del estado global. X
+- Utilizar Tailwind CSS para el diseño y estilización de la interfaz. X
+- Utilizar Axios (u otro cliente HTTP) para las llamadas a la API desde el frontend. X
+- Utilizar multer para la carga de archivos en Node.js. X
+
+X  = No realizados
+✅ = Realizados
+¿? = Confusión
