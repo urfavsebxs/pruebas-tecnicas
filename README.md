@@ -1,7 +1,5 @@
 # PRUEBAS TECNICAS
 
-## PRUEBA TECNICA 01
-
 ### Desarrollador: Sebastian Parra
 
 ### Objetivo
