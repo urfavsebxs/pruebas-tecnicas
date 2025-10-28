@@ -1,4 +1,4 @@
-# PRUEBAS TECNICAS
+# REPOSITORIO PARA PRUEBAS TECNICAS RESUELTAS
 
 ### Desarrollador: Sebastian Parra
 
