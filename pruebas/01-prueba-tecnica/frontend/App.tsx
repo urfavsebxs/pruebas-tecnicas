@@ -25,7 +25,7 @@ function App() {
     e.preventDefault();
     try {
       const { name, description, price, category_id } = formData;
-      const res = await fetch("http://localhost:3000/api/postProducts", {
+      const res = await fetch("http://localhost:3000/api/products", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, description, price, category_id }),
@@ -46,7 +46,7 @@ function App() {
     e.preventDefault();
     try {
       const { name, description, price, category_id } = formData;
-      const res = await fetch("http://localhost:3000/api/deleteProducts", {
+      const res = await fetch("http://localhost:3000/api/products", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, description, price, category_id }),
@@ -65,7 +65,7 @@ function App() {
   // Obtener productos
   const handleGet = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/getProducts");
+      const res = await fetch("http://localhost:3000/api/products");
       const data = await res.json();
       console.log("📦 Productos:", data);
       setProducts(data);
@@ -78,7 +78,7 @@ function App() {
   const handleUpdate = async () => {
     try {
       const { id, name, description, price, category_id } = formData;
-      const res = await fetch(`http://localhost:3000/api/putProducts/${id}`, {
+      const res = await fetch(`http://localhost:3000/api/products/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, description, price, category_id }),
@@ -201,6 +201,12 @@ function App() {
             Actualizar Lista
           </button>
         </aside>
+
+        <section>
+          <button>
+            
+          </button>
+        </section>
       </div>
     </div>
   );
